@@ -3,6 +3,7 @@ package com.dgltour;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import com.dgltour.R;
 
 public class SplashScreenActivity extends AppCompatActivity {
 
