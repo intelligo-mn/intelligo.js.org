@@ -2,8 +2,10 @@ package com.dgltour;
 
 import android.app.ProgressDialog;
 import android.content.SharedPreferences;
-import android.os.Bundle;
+import android.content.SharedPreferences.Editor;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -13,12 +15,10 @@ import android.widget.Toast;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-
 public class SignUpActivity extends AppCompatActivity {
 
     private static final String TAG = "SignUp";
     public SharedPreferences sharedPreferences;
-    SharedPreferences.Editor editor;
     EditText nameEditText, emailEditText, passwordEditText, confirmPasswordEditText;
     Button signUpButton;
     TextView loginLink;
@@ -42,13 +42,12 @@ public class SignUpActivity extends AppCompatActivity {
         signUpButton = (Button) findViewById(R.id.btnSignUp);
         loginLink = (TextView) findViewById(R.id.linkLogin);
 
-        signUpButton.setOnClickListener(new View.OnClickListener() private final Object View;
+        signUpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                signup();
 
-        {
-            @Override public void onClick (View v){
-            signup();
-
-        }
+            }
         });
 
         loginLink.setOnClickListener(new View.OnClickListener() {
@@ -59,37 +58,35 @@ public class SignUpActivity extends AppCompatActivity {
             }
         });
     }
+
     public void signup() {
         if (!validate()) {
             onSignupFailed();
             return;
         }
         signUpButton.setEnabled(false);
-        final ProgressDialog progressDialog = new ProgressDialog(SignUpActivity.this,
-                R.style.AppTheme_Dark_Dialog);
+        final ProgressDialog progressDialog = new ProgressDialog(SignUpActivity.this, R.style.AppTheme_Dark_Dialog);
         progressDialog.setIndeterminate(true);
         progressDialog.setMessage("Бүртгэл үүсгэж байна...");
         progressDialog.show();
 
         // TODO: Implement your own signup logic here.
-        new android.os.Handler().postDelayed(
-                new Runnable() {
-                    public void run() {
-                        onSignupSuccess();
-                        progressDialog.dismiss();
-                    }
-                }, 3000);
+        new android.os.Handler().postDelayed(new Runnable() {
+            public void run() {
+                onSignupSuccess();
+                progressDialog.dismiss();
+            }
+        }, 3000);
     }
 
     public void onSignupSuccess() {
         signUpButton.setEnabled(true);
         setResult(RESULT_OK, null);
-        new android.os.Handler().postDelayed(
-                new Runnable() {
-                    public void run() {
-                        finish();
-                    }
-                }, 3000);
+        new android.os.Handler().postDelayed(new Runnable() {
+            public void run() {
+                finish();
+            }
+        }, 3000);
         Toast.makeText(getBaseContext(), "Бүртгэл амжилттай боллоо", Toast.LENGTH_LONG).show();
         String name = nameEditText.getText().toString();
         String email = emailEditText.getText().toString();
@@ -106,7 +103,7 @@ public class SignUpActivity extends AppCompatActivity {
         boolean valid = true;
         sharedPreferences = getSharedPreferences(LoginActivity.PREFER_NAME, 0);
         editor = sharedPreferences.edit();
-        editor.putLong("UserId",0);
+        editor.putLong("UserId", 0);
         editor.commit();
 
         String name = nameEditText.getText().toString();
@@ -133,11 +130,10 @@ public class SignUpActivity extends AppCompatActivity {
         } else {
             passwordEditText.setError(null);
         }
-        if (!password.equals(confirmPassword)){
+        if (!password.equals(confirmPassword)) {
             confirmPasswordEditText.setError("Нууц үг таарахгүй байна");
             valid = false;
-        }
-        else{
+        } else {
             confirmPasswordEditText.setError(null);
         }
 
@@ -145,6 +141,7 @@ public class SignUpActivity extends AppCompatActivity {
 
         return valid;
     }
+
     private void saveLoggedInUser(long id, String username, String password) {
         sharedPreferences = getSharedPreferences(LoginActivity.PREFER_NAME, 0);
         editor = sharedPreferences.edit();
@@ -153,8 +150,10 @@ public class SignUpActivity extends AppCompatActivity {
         editor.putString("Password", password);
         editor.commit();
     }
+
     /**
      * Hashes the password with MD5.
+     *
      * @param s
      * @return
      */
@@ -166,7 +165,7 @@ public class SignUpActivity extends AppCompatActivity {
             byte messageDigest[] = digest.digest();
 
             StringBuffer hexString = new StringBuffer();
-            for (int i=0; i<messageDigest.length; i++)
+            for (int i = 0; i < messageDigest.length; i++)
                 hexString.append(Integer.toHexString(0xFF & messageDigest[i]));
             return hexString.toString();
 
@@ -174,3 +173,4 @@ public class SignUpActivity extends AppCompatActivity {
             return s;
         }
     }
+}
