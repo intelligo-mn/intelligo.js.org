@@ -8,19 +8,13 @@ import android.widget.ImageView;
 
 public class UserActivity extends AppCompatActivity {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user);
-    }
-
     ImageView settingsImg;
     ImageView back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_profile);
+        setContentView(R.layout.activity_user);
         getSupportActionBar().hide();
 
         back = (ImageView) findViewById(R.id.profile_back);
