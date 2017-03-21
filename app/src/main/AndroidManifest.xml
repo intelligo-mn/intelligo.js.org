@@ -25,7 +25,11 @@
         <activity android:name=".SignUpActivity" />
         <activity android:name=".UserActivity" />
         <activity android:name=".UserSettingsActivity" />
-        <activity android:name=".HelpActivity"></activity>
+        <activity android:name=".HelpActivity" />
+        <activity android:name=".CompanyActivity" />
+        <activity android:name=".TourActivity" />
+        <activity android:name=".TourDetailActivity" />
+        <activity android:name=".AddActivity"></activity>
     </application>
 
 </manifest>

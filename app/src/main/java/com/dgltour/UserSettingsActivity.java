@@ -11,7 +11,6 @@ public class UserSettingsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_settings);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
     }
 
     @Override
@@ -24,6 +23,5 @@ public class UserSettingsActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
         return false;
-    }
     }
 }
