@@ -1,4 +1,4 @@
-package com.dglproject.tour;
+package com.dglproject.tour.utils;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -12,6 +12,8 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Interpolator;
+
+import com.dglproject.tour.R;
 
 /**
  * Created by Tortuvshin Byambaa on 2/24/2017.

@@ -1,4 +1,4 @@
-package com.dglproject.tour;
+package com.dglproject.tour.utils;
 
 import android.content.Context;
 import android.os.Parcelable;
