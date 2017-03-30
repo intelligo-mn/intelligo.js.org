@@ -31,7 +31,7 @@ public class CompanyFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_company, container, false);
 
         TextView textView = (TextView) view.findViewById(R.id.text_view);
         return view;
