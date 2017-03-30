@@ -33,7 +33,6 @@ public class AddFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_add, container, false);
 
-        TextView textView = (TextView) view.findViewById(R.id.text_view);
         return view;
     }
 }
