@@ -12,18 +12,22 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.dglproject.tour.R;
+import com.dglproject.tour.fragments.AddFragment;
+import com.dglproject.tour.fragments.CompanyFragment;
 import com.dglproject.tour.fragments.HomeFragment;
+import com.dglproject.tour.fragments.NavigationFragment;
+import com.dglproject.tour.fragments.SearchFragment;
 import com.dglproject.tour.widgets.CustomViewPager;
 
 public class MainActivity extends AppCompatActivity {
 
     private TabLayout mTabLayout;
     private int[] mTabsIcons = {
-            R.drawable.ic_recents_selector,
-            R.drawable.ic_favorite_selector,
-            R.drawable.ic_place_selector,
-            R.drawable.ic_place_selector,
-            R.drawable.ic_place_selector};
+            R.drawable.dgl_white_home,
+            R.drawable.dgl_white_favorite,
+            R.drawable.dgl_white_add,
+            R.drawable.dgl_white_search,
+            R.drawable.dgl_white_info};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,13 +79,13 @@ public class MainActivity extends AppCompatActivity {
                 case 0:
                     return HomeFragment.newInstance(1);
                 case 1:
-                    return HomeFragment.newInstance(2);
+                    return CompanyFragment.newInstance(2);
                 case 2:
-                    return HomeFragment.newInstance(3);
+                    return AddFragment.newInstance(3);
                 case 3:
-                    return HomeFragment.newInstance(4);
+                    return SearchFragment.newInstance(4);
                 case 4:
-                    return HomeFragment.newInstance(5);
+                    return NavigationFragment.newInstance(5);
 
             }
             return null;
