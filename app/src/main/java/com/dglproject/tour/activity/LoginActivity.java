@@ -48,7 +48,6 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-
         prefManager = new PrefManager(this);
 
         if(prefManager.isLoggedIn()){

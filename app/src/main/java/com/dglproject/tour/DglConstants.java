@@ -23,7 +23,7 @@ public class DglConstants {
     public static String SendDataAPI = "http://www.dgl.toroo.info/api/add-order.php";
     public static String CompanyAPI = "http://www.dgl.toroo.info/api/get-company.php";
 
-    public static String UserService= "http://dgl.toroo.info/api/UserService.php";
+    public static String UserService= "https://www.dglproject.com/applications/api/UserService.php";
     public static String BrandService= "http://dgl.toroo.info/api/BrandService.php";
 
     public static String AccessKey = "12345";
@@ -37,6 +37,7 @@ public class DglConstants {
             return false;
         } else {
             NetworkInfo[] info = connectivity.getAllNetworkInfo();
+
             if (info != null) {
                 for (int i = 0; i < info.length; i++) {
                     if (info[i].getState() == NetworkInfo.State.CONNECTED) {
