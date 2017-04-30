@@ -1,15 +1,22 @@
 package com.dglproject.tour.activity;
 
+import android.content.pm.PackageManager;
+import android.os.Build;
+import android.os.Handler;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.dglproject.tour.R;
 import com.dglproject.tour.fragments.AddFragment;
@@ -23,11 +30,11 @@ public class MainActivity extends AppCompatActivity {
 
     private TabLayout mTabLayout;
     private int[] mTabsIcons = {
-            R.drawable.dgl_white_home,
-            R.drawable.dgl_white_favorite,
-            R.drawable.dgl_white_add,
-            R.drawable.dgl_white_search,
-            R.drawable.dgl_white_info};
+            R.drawable.dgl_home,
+            R.drawable.dgl_dart_board,
+            R.drawable.dgl_add_black,
+            R.drawable.dgl_search,
+            R.drawable.dgl_menu};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,12 +69,16 @@ public class MainActivity extends AppCompatActivity {
 
         public final int PAGE_COUNT = 5;
 
+        private final String[] mTabsTitle = {getString(R.string.brand), getString(R.string.product),  getString(R.string.add), getString(R.string.search_hint), getString(R.string.menu)};
+
         public MyPagerAdapter(FragmentManager fm) {
             super(fm);
         }
 
         public View getTabView(int position) {
             View view = LayoutInflater.from(MainActivity.this).inflate(R.layout.custom_tab, null);
+            TextView title = (TextView) view.findViewById(R.id.title);
+            title.setText(mTabsTitle[position]);
             ImageView icon = (ImageView) view.findViewById(R.id.icon);
             icon.setImageResource(mTabsIcons[position]);
             return view;
@@ -97,5 +108,68 @@ public class MainActivity extends AppCompatActivity {
             return PAGE_COUNT;
         }
 
+    }
+
+
+    boolean doubleBackToExitPressedOnce = false;
+
+    @Override
+    public void onBackPressed() {
+
+        if (doubleBackToExitPressedOnce) {
+            super.onBackPressed();
+            return;
+        }
+
+        this.doubleBackToExitPressedOnce = true;
+        Toast.makeText(this, getString(R.string.exit_two_press), Toast.LENGTH_SHORT).show();
+
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce=false;
+            }
+        }, 2000);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+//        switch (id) {
+//            case R.id.action_search:
+//                Intent search = new Intent(MainActivity.this, ActivitySearch.class);
+//                startActivity(search);
+//                return true;
+//        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
+    public boolean isStoragePermissionGranted() {
+        if (Build.VERSION.SDK_INT >= 23) {
+            if (checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                    == PackageManager.PERMISSION_GRANTED) {
+                return true;
+            } else {
+
+                ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+                return false;
+            }
+        } else {
+            return false;
+        }
     }
 }
