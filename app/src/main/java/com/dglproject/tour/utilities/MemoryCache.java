@@ -1,4 +1,4 @@
-package com.dglproject.tour.utils;
+package com.dglproject.tour.utilities;
 
 import android.graphics.Bitmap;
 import android.util.Log;

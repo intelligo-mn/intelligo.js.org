@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 import com.dglproject.tour.R;
 import com.dglproject.tour.json.JSONParser;
-import com.dglproject.tour.utils.PrefManager;
+import com.dglproject.tour.utilities.PrefManager;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;

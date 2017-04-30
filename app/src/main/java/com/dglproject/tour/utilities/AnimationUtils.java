@@ -1,4 +1,4 @@
-package com.dglproject.tour.utils;
+package com.dglproject.tour.utilities;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
