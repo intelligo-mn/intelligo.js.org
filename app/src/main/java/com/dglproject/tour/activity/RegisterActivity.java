@@ -194,7 +194,6 @@ public class RegisterActivity extends AppCompatActivity {
             JSONObject json = jsonParser.makeHttpRequest(URL, "POST", params);
 
             return json;
-
         }
 
         protected void onPostExecute(JSONObject result) {
