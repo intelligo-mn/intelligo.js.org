@@ -44,10 +44,9 @@ public class HomeFragment extends Fragment {
         homeSliderLayout = (SliderLayout) view.findViewById(R.id.slider);
 
         HashMap<String,String> url_maps = new HashMap<String, String>();
-        url_maps.put("Hannibal", "http://static2.hypable.com/wp-content/uploads/2013/12/hannibal-season-2-release-date.jpg");
-        url_maps.put("Big Bang Theory", "http://tvfiles.alphacoders.com/100/hdclearart-10.png");
-        url_maps.put("House of Cards", "http://cdn3.nflximg.net/images/3093/2043093.jpg");
-        url_maps.put("Game of Thrones", "http://images.boomsbeat.com/data/images/full/19640/game-of-thrones-season-4-jpg.jpg");
+        url_maps.put("", "https://i.ytimg.com/vi/uF4B3EVjs6A/maxresdefault.jpg");
+        url_maps.put("", "http://elevatedestinations.com/wp-content/uploads/2012/08/nature1.jpg");
+        url_maps.put("", "https://www.flywatertravel.com/files/images/mongo.14-56.jpg");
 
         for(String name : url_maps.keySet()){
             TextSliderView textSliderView = new TextSliderView(getContext());
