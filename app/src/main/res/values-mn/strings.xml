@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Dgl Brand</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -42,7 +43,7 @@
     <string name="about">Тухай</string>
     <string name="introduction">Танилцуулга</string>
     <string name="app_version">Хувилбар 1.0.0</string>
-    <string name="app_copyright">Зохигчийн эрх © 2017 DGL BRAND.</string>
+    <string name="app_copyright">Зохиогчийн эрх © 2017 DGL BRAND.</string>
     <string name="app_email">toroo.byamba@gmail.com</string>
     <string name="share_summary">Бусад хүмүүст хуваалцан</string>
     <string name="rate_summary">Та үнэлгээ болон саналаа өгнө үү</string>
@@ -118,10 +119,9 @@
 
     <string name="product_add">Бүтээгдэхүүн нэмэх</string>
     <string name="are_you_sure">Та зөвшөөрч байна уу?</string>
-    <string name="yes">Тийм</string>
     <string name="no">Үгүй</string>
-    <string name="success">Амжилттай бүртгэгдлээ</string>
+    <string name="yes">Тийм</string>
+    <string name="success">Амжилттай</string>
     <string name="error">Алдаа гарлаа</string>
-
 
 </resources>
