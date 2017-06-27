@@ -3,10 +3,22 @@ package com.dglproject.tour.utilities;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Context;
+import android.content.res.TypedArray;
+import android.support.annotation.IdRes;
+import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewCompat;
+import android.support.v4.view.ViewPropertyAnimatorCompat;
 import android.support.v4.view.ViewPropertyAnimatorListener;
+import android.support.v4.view.animation.LinearOutSlowInInterpolator;
+import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewAnimationUtils;
+import android.view.ViewGroup;
+import android.view.animation.Interpolator;
+
+import com.dglproject.tour.R;
 
 /**
  * Created by Tortuvshin Byambaa on 3/30/2017.
@@ -122,4 +134,5 @@ public class AnimationUtils {
         fadeInView(showView, duration);
         fadeOutView(hideView, duration);
     }
+
 }
