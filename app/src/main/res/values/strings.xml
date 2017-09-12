@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Dgl Tour</string>
+    <string name="app_name">Techstar Tour</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="name">Нэр</string>
@@ -110,7 +110,7 @@
                     хувь хүн, байгууллагатай хамтран
                     ажиллах гүүрийг санал болгож байна.!</string>
 
-    <string name="slide_4_title">DGL Brand</string>
+    <string name="slide_4_title">Techstar Tour</string>
     <string name="slide_4_desc">Бид таныг сайн санаат байгууллага,
                     хувь хүнтэй холбож өгнө.!</string>
 

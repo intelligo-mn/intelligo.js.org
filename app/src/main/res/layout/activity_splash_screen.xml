@@ -9,7 +9,7 @@
     android:paddingLeft="0dp"
     android:paddingRight="0dp"
     android:paddingTop="0dp"
-    tools:context="com.dglproject.tour.activity.SplashScreenActivity"
+    tools:context="cloud.techstar.tour.activity.SplashScreenActivity"
     android:background="@color/white">
 
     <ImageView

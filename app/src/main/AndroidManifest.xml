@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.dglproject.tour">
+    package="cloud.techstar.tour">
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
@@ -18,12 +18,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activity.MainActivity">
+            android:name="cloud.techstar.tour.activity.MainActivity">
         </activity>
-        <activity android:name=".activity.LoginActivity" />
-        <activity android:name=".activity.RegisterActivity" />
+        <activity android:name="cloud.techstar.tour.activity.LoginActivity" />
+        <activity android:name="cloud.techstar.tour.activity.RegisterActivity" />
         <activity
-            android:name=".activity.SplashScreenActivity"
+            android:name="cloud.techstar.tour.activity.SplashScreenActivity"
             android:theme="@style/AppFullScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Dgl Tour</string>
+    <string name="app_name">Techstar Tour</string>
     <string name="navigation_drawer_open">Открыт навигации drawer</string>
     <string name="navigation_drawer_close">Закрыть панель навигации</string>
     <string name="name">Имя</string>
