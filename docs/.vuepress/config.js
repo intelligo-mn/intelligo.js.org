@@ -16,7 +16,7 @@ module.exports = {
 		}
 	},
 	themeConfig: {
-		repo: 'https://github.com/intelligo-systems/intelligo.js.org',
+		repo: 'https://github.com/intelligo-systems/intelligo',
 		repoLabel: 'Github',
 		docsDir: './docs',
 		editLinks: true,
