@@ -33,7 +33,7 @@
     "postinstall": "opencollective-postinstall",
     "test": "mocha --recursive test/*",
     "test:watch": "npm test -- --watch",
-    "start": "vuepress dev app",
+    "dev": "vuepress dev app",
     "build": "vuepress build app"
   }
 }
