@@ -12,7 +12,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "intelligo": "^1.0.1",
+    "intelligo": "^0.9.16",
     "opencollective": "^1.0.3",
     "opencollective-postinstall": "^2.0.2"
   },
@@ -33,7 +33,7 @@
     "postinstall": "opencollective-postinstall",
     "test": "mocha --recursive test/*",
     "test:watch": "npm test -- --watch",
-    "dev": "vuepress dev app",
-    "build": "vuepress build app"
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
   }
 }
