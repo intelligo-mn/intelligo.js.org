@@ -1,10 +1,10 @@
 module.exports = {
 	title: 'Intelligo Framework',
-	dest: './docs',
+	dest: './dist',
 	themeConfig: {
 		repo: 'https://github.com/intelligo-systems/intelligo.js.org',
 		repoLabel: 'Github',
-		docsDir: './src',
+		docsDir: './docs',
 		editLinks: true,
 		logo: '/logo.png',
 		editLinkText: 'Found a bug? Help me improve this page!',
