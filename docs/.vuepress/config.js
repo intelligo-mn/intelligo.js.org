@@ -7,12 +7,12 @@ module.exports = {
 		'/': {
 			lang: 'en-US', 
 			title: 'Intelligo Framework',
-			description: 'Intelligo AI chatbot framework'
+			description: 'Intelligo AI chatbot framework. Intelligo is a JavaScript Framework to build AI Chat bots.'
 		},
 		'/mn/': {
 			lang: 'mn',
 			title: 'Intelligo Framework',
-			description: 'Intelligo AI chatbot framework'
+			description: 'Intelligo AI chatbot framework. Хиймэл оюунтай чатбот хөгжүүлэхэд зориулсан framework.'
 		}
 	},
 	themeConfig: {
@@ -187,6 +187,7 @@ module.exports = {
 			'meta',
 			{ name: 'msapplication-TileImage', content: '/ms-icon-144x144.png' }
 		],
-		['meta', { name: 'theme-color', content: '#3e82f7' }]
+		['meta', { name: 'theme-color', content: '#3e82f7' }],
+		['meta', { name: 'keywords', content: 'ai, ai bot, chat, chatbot, messenger bot, bot framework, intelligo, чатбот, чат, бот, хиймэл оюун, чатбот хийх, чатбот хөгжүүлэх' }]	
 	]
 }
