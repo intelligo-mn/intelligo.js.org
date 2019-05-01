@@ -879,7 +879,7 @@
   dependencies:
     lodash.throttle "^4.1.1"
 
-"@vuepress/plugin-google-analytics@^1.0.0-alpha.33":
+"@vuepress/plugin-google-analytics@^1.0.0-alpha.47":
   version "1.0.0-alpha.47"
   resolved "https://registry.yarnpkg.com/@vuepress/plugin-google-analytics/-/plugin-google-analytics-1.0.0-alpha.47.tgz#48af1cda1bd9f1a9f5c3506c398a1c364db6647f"
   integrity sha512-QuJoudT8EGo14oQsNrFpV9sKYNAkHH31Jv5R8/7JSEBcG9NKgpIUAaCkb2+/Ytwot2Oh/cd7MQsZvHQeXWuTBQ==
@@ -8021,7 +8021,7 @@ vuepress-plugin-rss@^2.0.0:
     fs-extra "^5.0.0"
     rss "^1.2.2"
 
-vuepress@^1.0.0-alpha.30:
+vuepress@^1.0.0-alpha.47:
   version "1.0.0-alpha.47"
   resolved "https://registry.yarnpkg.com/vuepress/-/vuepress-1.0.0-alpha.47.tgz#b6f06a5569aaf0b4016f9eb1da5fd4e01f295d45"
   integrity sha512-AxvDNsT1Cj7ZrVSR4pKtCDD4DYQOTMWtUkBcRDAuSzBIJfjOjdrW6FY/G27SrKHA7cKhVXzxBiHYmXysIpfPjw==
