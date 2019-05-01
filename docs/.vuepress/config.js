@@ -55,8 +55,8 @@ module.exports = {
 				}
 			  },
 			  nav: [
-				{ text: 'Home', link: '/mn/' }, 
-				{ text: 'Learn', link: '/mn/learn/' }
+				{ text: 'Эхлэл', link: '/mn/' }, 
+				{ text: 'Чатбот хийх', link: '/mn/learn/' }
 			  ],
 			  algolia: {}
 		

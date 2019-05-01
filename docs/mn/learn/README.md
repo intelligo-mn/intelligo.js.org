@@ -27,25 +27,25 @@ type: guide
      </a>
 </p>
 
-## Introduction
+## Танилцуулга
 
-Intelligo is a JavaScript Framework to build Facebook Messenger's Chat bots. 
+Intelligo бол хиймэл оюунтай чатбот бүтээхэд зориулсан Javascript Framework юм.
 
-## Getting Started
+## Эхлэх
 
-### Prerequisites
+### Шаардлагатай зүйлс
 
 - [NodeJS >= 8](https://nodejs.org/)
 - [Express](https://expressjs.com/)
-- Basic knowledge of navigating the terminal
+- Terminal болон command line багаж хэрэгсэлүүд дээр ажиллах
 
-### Installation
+### Суулгах
 
 ```
 npm install intelligo --save
 ```
 
-## Example
+## Жишээ код
 
 ```js
 'use strict';
@@ -87,11 +87,9 @@ app.listen(app.get('port'), function() {
 });
 ```
 
-## Training
+## Сургах
 
-Use `bot.learn()` to train the neural network with an array of training data. The network has to be trained with all the data in bulk in one call to `bot.learn()`. More training patterns will probably take longer to train, but will usually result in a network better at classifying new patterns.
-
-Example using strings with inputs and outputs:
+`bot.learn()` комманд ашиглан неорон сүлжээгээ сургах боломжтой. 
 
 ```js
 bot.learn([
@@ -104,7 +102,7 @@ var result = bot.answer('I feel great about the world!');  // 'happy'
 
 #### `bot.on('message', (event));`
 
-Triggered when a message is sent to the bot.
+Ботруу мэссэж илгээх
 
 ```js
 bot.on('message', (event) => {
@@ -116,47 +114,47 @@ bot.on('message', (event) => {
 });
 ```
 
-## Quick Start
+## СLI ашиглах
 
-The quickest way to get started with intelligo is to utilize the generator [`cli`](https://github.com/intelligo-systems/intelligo-cli) to generate an bot as shown below:
+Бот үүсгэх хамгийн хялбар арга бол intelligo generator [`cli`](https://github.com/intelligo-systems/intelligo-cli) ашиглан ботын суурь кодыг үүсгэж ашиглах.
 
-Install the command line tool
+Суулгах заавар
 
 ```bash
 $ npm install intelligo-cli -g
 ```
-Create the your bot project:
+Ботын суурь код үүсгэх:
 
 ```bash
 $ intelligo mybot && cd mybot
 ```
 
-Set the values in `config/default.json` before running the bot. Using your Facebook Page's / App's `ACCESS_TOKEN`, `VERIFY_TOKEN` and `APP_SECRET`
+Тохиргооны `config/default.json` файлд шаардлагатай утгуудыг зааж өгсөний дараа бот шууд ажиллах боломжтой. Өөрийн Facebook Page болон App-ийн `ACCESS_TOKEN`, `VERIFY_TOKEN`, `APP_SECRET` гэх мэт утгуудыг ашиглана.
 
-- `ACCESS_TOKEN:` A page access token for your app, found under App -> Products -> Messenger -> Settings -> Token Generation
-- `VERIFY_TOKEN:` A token that verifies your webhook is being called. Can be any value, but needs to match the value in App -> Products -> Webhooks -> Edit Subscription
-- `APP_SECRET:` A app secret for your app, found under App -> Settings -> Basic -> App Secret -> Show
+- `ACCESS_TOKEN:` нь App -> Products -> Messenger -> Settings -> Token Generation хэсгээс авах боломжтой
+- `VERIFY_TOKEN:` нь App -> Products -> Webhooks -> Edit Subscription
+- `APP_SECRET:` нь App -> Settings -> Basic -> App Secret -> Show
 
-**Note:** If you don't know how to get these tokens, take a look at Facebook's [Quick Start Guide](https://developers.facebook.com/docs/messenger-platform/guides/quick-start) .
+**Тайлбар:** Хэрэв эдгээр тохиргооны мэдээллүүдийг хэрхэн авахаа мэдэхгүй бол [Quick Start Guide](https://developers.facebook.com/docs/messenger-platform/guides/quick-start) хэсгээс дэлгэрэнгүй харна уу.
 
-Install dependencies:
+Dependencies суулгах:
 
 ```bash
 $ npm install
 ```
 
-Start your bot server:
+Ботоо ажиллуулах:
 
 ```bash
 $ npm start
 ```
-## Example bots
+## Жишээ ботын кодууд
 
-Collection of examples for using Intelligo Framework.
+Intelligo Framework ашиглан хийсэн жишээ чатботын кодууд.
 
-- **Hello, world** The [hello world bot](https://github.com/intelligo-systems/intelligo/blob/master/samples/hello-bot) is a minimal Messenger bot.
+- **Hello, world** [hello world bot](https://github.com/intelligo-systems/intelligo/blob/master/samples/hello-bot) буюу энгийн Messenger bot.
 
-- **Jisho bot** The [jisho bot](https://github.com/intelligo-systems/intelligo/blob/master/samples/jisho-bot) Japanese-English dictionary Messenger bot using [www.jisho.org](https://jisho.org/) public API.
+- **Jisho bot** [jisho bot](https://github.com/intelligo-systems/intelligo/blob/master/samples/jisho-bot) Япон Англи орчуулагч бот [www.jisho.org](https://jisho.org/) сайтын public API ашиглан өгөгдлөө авна.
 
 
 ## Contributors
@@ -168,9 +166,7 @@ or translating any document here to your language. [Find more information in CON
 This project exists thanks to all the people who contribute.
 <a href="https://github.com/intelligo-systems/intelligo/contributors"><img src="https://opencollective.com/intelligo/contributors.svg?width=890&button=false" /></a>
 
-## Supporting
-
-If you'd like to join them, please consider:
+## Дэмжих
 
  <a href='https://www.ko-fi.com/turtuvshin' target="_blank">
     <img src='https://az743702.vo.msecnd.net/cdn/kofi3.png?v=0' height='35' alt='Buy Me a Coffee at ko-fi.com' />
@@ -182,31 +178,7 @@ If you'd like to join them, please consider:
   <img src="https://opencollective.com/intelligo/donate/button@2x.png?color=blue" height='35'/>
 </a>
 
-## Backers
-
-Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com/intelligo#backer)]
-
-<a href="https://opencollective.com/intelligo#backers" target="_blank"><img src="https://opencollective.com/intelligo/backers.svg?width=890"></a>
-
-
-## Sponsors
-
-Support this project by becoming a sponsor. Your logo will show up here with a link to your website. [[Become a sponsor](https://opencollective.com/intelligo#sponsor)]
-
-<a href="https://opencollective.com/intelligo/sponsor/0/website" target="_blank"><img src="https://opencollective.com/intelligo/sponsor/0/avatar.svg"></a>
-<a href="https://opencollective.com/intelligo/sponsor/1/website" target="_blank"><img src="https://opencollective.com/intelligo/sponsor/1/avatar.svg"></a>
-<a href="https://opencollective.com/intelligo/sponsor/2/website" target="_blank"><img src="https://opencollective.com/intelligo/sponsor/2/avatar.svg"></a>
-<a href="https://opencollective.com/intelligo/sponsor/3/website" target="_blank"><img src="https://opencollective.com/intelligo/sponsor/3/avatar.svg"></a>
-<a href="https://opencollective.com/intelligo/sponsor/4/website" target="_blank"><img src="https://opencollective.com/intelligo/sponsor/4/avatar.svg"></a>
-<a href="https://opencollective.com/intelligo/sponsor/5/website" target="_blank"><img src="https://opencollective.com/intelligo/sponsor/5/avatar.svg"></a>
-<a href="https://opencollective.com/intelligo/sponsor/6/website" target="_blank"><img src="https://opencollective.com/intelligo/sponsor/6/avatar.svg"></a>
-<a href="https://opencollective.com/intelligo/sponsor/7/website" target="_blank"><img src="https://opencollective.com/intelligo/sponsor/7/avatar.svg"></a>
-<a href="https://opencollective.com/intelligo/sponsor/8/website" target="_blank"><img src="https://opencollective.com/intelligo/sponsor/8/avatar.svg"></a>
-<a href="https://opencollective.com/intelligo/sponsor/9/website" target="_blank"><img src="https://opencollective.com/intelligo/sponsor/9/avatar.svg"></a>
-
-
-
-## License
+## Зохиогчийн эрх
 
 > Copyright (C) 2019 Intelligo Systems.  
 > Intelligo framework is open-sourced software licensed under the [MIT](https://opensource.org/licenses/MIT) license.  
