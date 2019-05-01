@@ -1,28 +1,78 @@
 module.exports = {
 	title: 'Intelligo Framework',
 	dest: './dist',
+	locales: {
+		// The key is the path for the locale to be nested under.
+		// As a special case, the default locale can use '/' as its path.
+		'/': {
+			lang: 'en-US', 
+			title: 'Intelligo Framework',
+			description: 'Intelligo AI chatbot framework'
+		},
+		'/mn/': {
+			lang: 'mn',
+			title: 'Intelligo Framework',
+			description: 'Intelligo AI chatbot framework'
+		}
+	},
 	themeConfig: {
 		repo: 'https://github.com/intelligo-systems/intelligo.js.org',
 		repoLabel: 'Github',
 		docsDir: './docs',
 		editLinks: true,
 		logo: '/logo.png',
-		editLinkText: 'Found a bug? Help me improve this page!',
-		nav: [
-			{ text: 'Home', link: '/' }, 
-			{ text: 'Learn', link: '/learn/' }
-		],
+		
+		locales: {
+			'/': {
+			  // text for the language dropdown
+			  selectText: 'Languages',
+			  // label for this locale in the language dropdown
+			  label: 'English',
+			  // text for the edit-on-github link
+			  editLinkText: 'Edit this page on GitHub',
+			  // config for Service Worker 
+			  serviceWorker: {
+				updatePopup: {
+				  message: "New content is available.",
+				  buttonText: "Refresh"
+				}
+			  },
+			  // algolia docsearch options for current locale
+			  algolia: {},
+			  nav: [
+				{ text: 'Home', link: '/' }, 
+				{ text: 'Learn', link: '/learn/' }	
+			  ]
+			},
+			'/mn/': {
+			  selectText: 'Хэл солих',
+			  label: 'Монгол хэл',
+			  editLinkText: 'Энэ хуудасыг GitHub дээр засах',
+			  serviceWorker: {
+				updatePopup: {
+				  message: "Шинэ өгөгдөл нэмэгдсэн байна.",
+				  buttonText: "Шинэчлэх"
+				}
+			  },
+			  nav: [
+				{ text: 'Home', link: '/mn/' }, 
+				{ text: 'Learn', link: '/mn/learn/' }
+			  ],
+			  algolia: {}
+		
+			}
+		  },
 		version: '1.0.0-alpha.47'
 	},
 	plugins: [
 		[
-			'@vuepress/pwa', {
+			'@vuepress/plugin-pwa', {
 				serviceWorker: true,
 				updatePopup: true
 			}
 		],
 		[
-			'@vuepress/google-analytics',
+			'@vuepress/plugin-google-analytics',
 			{
 				ga: 'UA-111622042-3'
 			}
