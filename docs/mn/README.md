@@ -2,8 +2,8 @@
 home: true
 heroImage: /logo.png
 heroText: Intelligo Framework
-tagline: Intelligo is a JavaScript Framework to build Facebook Messenger's AI Chat bots.
-actionText: Get Started →
+tagline: Intelligo бол хиймэл оюунтай чатбот бүтээхэд зориулсан Javascript Framework юм.
+actionText: Эхлэх →
 actionLink: /mn/learn/
 
 footer: MIT Licensed | Created by Intelligo Systems
