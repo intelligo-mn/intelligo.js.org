@@ -12,7 +12,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "intelligo": "^0.9.16",
+    "intelligo": "^1.0.0",
     "opencollective": "^1.0.3",
     "opencollective-postinstall": "^2.0.2"
   },
