@@ -13,7 +13,7 @@ type: guide
    <a href="https://www.npmjs.com/package/intelligo">
       <img alt="npm downloads" src="https://img.shields.io/npm/dt/intelligo.svg?style=flat-square">
     </a>
-     <a href="https://www.npmjs.com/package/intelligo">
+    <a href="https://www.npmjs.com/package/intelligo">
         <img alt="undefined" src="https://img.shields.io/npm/v/intelligo.svg?style=flat-square">
         </a>
     <a href="https://github.com/tortuvshin/">
@@ -27,23 +27,20 @@ type: guide
      </a>
 </p>
 
-## Introduction
 
-Intelligo is a JavaScript Framework to build Facebook Messenger's Chat bots. 
+Intelligo is a JavaScript Framework to build AI Chat bots.
 
-## Getting Started
+## Installation
 
-### Prerequisites
+[![NPM](https://nodei.co/npm/intelligo.png?compact=true)](https://nodei.co/npm/intelligo/)
 
-- [NodeJS >= 8](https://nodejs.org/)
-- [Express](https://expressjs.com/)
-- Basic knowledge of navigating the terminal
+## Related projects
 
-### Installation
+| Project | Build Status | NPM version |
+|-----------|--------------|---------------------------|
+| [neuro.js](https://github.com/intelligo-systems/neuro.js) | [![Build status](https://ci.appveyor.com/api/projects/status/eue1p0li7vf7hqt9?svg=true)](https://ci.appveyor.com/project/tortuvshin/intelligo-cli) | [![npm version](https://badgen.net/npm/v/neuro.js)](https://www.npmjs.com/package/neuro.js) |
+| [intelligo-cli](https://github.com/intelligo-systems/intelligo-cli) | [![Build status](https://ci.appveyor.com/api/projects/status/eue1p0li7vf7hqt9?svg=true)](https://ci.appveyor.com/project/tortuvshin/intelligo-cli) | [![npm version](https://badgen.net/npm/v/intelligo-cli)](https://www.npmjs.com/package/intelligo-cli) |
 
-```
-npm install intelligo --save
-```
 
 ## Example
 
@@ -55,7 +52,7 @@ const express = require('express'),
 
 const app = express();
 
-const bot = new Intelligo({
+const bot = new Intelligo.MessengerBot({
   PAGE_ACCESS_TOKEN: 'PAGE_ACCESS_TOKEN',
   VALIDATION_TOKEN: 'VALIDATION_TOKEN',
   APP_SECRET: 'APP_SECRET',
@@ -87,7 +84,7 @@ app.listen(app.get('port'), function() {
 });
 ```
 
-## Training
+### Training
 
 Use `bot.learn()` to train the neural network with an array of training data. The network has to be trained with all the data in bulk in one call to `bot.learn()`. More training patterns will probably take longer to train, but will usually result in a network better at classifying new patterns.
 
@@ -118,18 +115,21 @@ bot.on('message', (event) => {
 
 ## Quick Start
 
-The quickest way to get started with intelligo is to utilize the generator [`cli`](https://github.com/intelligo-systems/intelligo-cli) to generate an bot as shown below:
+The quickest way to get started with intelligo is to utilize the [`intelligo-cli`](https://github.com/intelligo-systems/intelligo-cli) to generate an bot as shown below:
 
 Install the command line tool
 
 ```bash
 $ npm install intelligo-cli -g
 ```
-Create the your bot project:
 
-```bash
-$ intelligo mybot && cd mybot
-```
+### Messenger bot
+
+Generate the your messenger bot project:
+
+<p align="center">
+<img width="100%" src="https://raw.githubusercontent.com/intelligo-systems/intelligo-cli/master/.github/intelligo-cli-messenger.gif">
+</p>
 
 Set the values in `config/default.json` before running the bot. Using your Facebook Page's / App's `ACCESS_TOKEN`, `VERIFY_TOKEN` and `APP_SECRET`
 
@@ -139,29 +139,43 @@ Set the values in `config/default.json` before running the bot. Using your Faceb
 
 **Note:** If you don't know how to get these tokens, take a look at Facebook's [Quick Start Guide](https://developers.facebook.com/docs/messenger-platform/guides/quick-start) .
 
-Install dependencies:
+### Slack bot
+
+Generate the your slack bot project:
+
+<p align="center">
+<img width="100%" src="https://raw.githubusercontent.com/intelligo-systems/intelligo-cli/master/.github/intelligo-cli-slack.gif">
+</p>
+
+Before you start, you'll need a Slack App. If you don't already have one, click the following [link to create it](https://my.slack.com/services/new/bot) and put ```token``` in `index.js` file.
+
+### Install dependencies:
 
 ```bash
 $ npm install
 ```
 
-Start your bot server:
+### Run your bot
+
+Start your bot app:
 
 ```bash
 $ npm start
 ```
-## Example bots
+
+## Examples
 
 Collection of examples for using Intelligo Framework.
 
 - **Hello, world** The [hello world bot](https://github.com/intelligo-systems/intelligo/blob/master/samples/hello-bot) is a minimal Messenger bot.
 
-- **Jisho bot** The [jisho bot](https://github.com/intelligo-systems/intelligo/blob/master/samples/jisho-bot) Japanese-English dictionary Messenger bot using [www.jisho.org](https://jisho.org/) public API.
+- **Jisho bot** The [jisho bot](https://github.com/intelligo-systems/jisho-bot) Japanese-English dictionary Messenger bot using [www.jisho.org](https://jisho.org/) public API.
 
 
 ## Contributors
 
-You may contribute in several ways like creating new features, fixing bugs, improving documentation and examples
+- 📥 Pull requests and 🌟 Stars are always welcome. 
+- You may contribute in several ways like creating new features, fixing bugs, improving documentation and examples
 or translating any document here to your language. [Find more information in CONTRIBUTING.md](CONTRIBUTING.md).
 <a href="https://github.com/intelligo-systems/intelligo/graphs/contributors">Contributors</a>
 
@@ -203,7 +217,6 @@ Support this project by becoming a sponsor. Your logo will show up here with a l
 <a href="https://opencollective.com/intelligo/sponsor/7/website" target="_blank"><img src="https://opencollective.com/intelligo/sponsor/7/avatar.svg"></a>
 <a href="https://opencollective.com/intelligo/sponsor/8/website" target="_blank"><img src="https://opencollective.com/intelligo/sponsor/8/avatar.svg"></a>
 <a href="https://opencollective.com/intelligo/sponsor/9/website" target="_blank"><img src="https://opencollective.com/intelligo/sponsor/9/avatar.svg"></a>
-
 
 
 ## License
